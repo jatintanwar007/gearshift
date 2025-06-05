@@ -1,0 +1,16 @@
+.customer div {
+    transition: all 0.5s ease-in-out;
+}
+
+.customer:hover h2 {
+    transform: translateY(-120px);
+    transition: all 0.5s ease-in-out;
+}
+
+.customer:hover p {
+    transform: translateY(90px);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
