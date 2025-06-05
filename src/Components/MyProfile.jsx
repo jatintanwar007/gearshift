@@ -80,7 +80,7 @@ const MyProfile = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-4">
               <img
-                src="/images/man.png"
+                src="/Images/man.png"
                 alt="Profile"
                 className="w-24 h-24 rounded-full border-4 border-red-500"
               />

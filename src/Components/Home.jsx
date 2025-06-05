@@ -124,7 +124,7 @@ const Home = () => {
         <div className="overflow-hidden">
           <div className="relative">
             <img
-              src="/images/slider.jpg"
+              src="/Images/slider.jpg"
               alt="Featured vehicle"
               className="w-full h-[600px] object-cover"
               loading="eager"
@@ -146,17 +146,17 @@ const Home = () => {
         <Slider {...settings} className="overflow-hidden">
           {[
             {
-              img: "/images/mustang.jpg",
+              img: "/Images/mustang.jpg",
               title: "Ford Mustang GT",
               subtitle: "Raw power meets modern luxury",
             },
             {
-              img: "/images/volvo.png",
+              img: "/Images/volvo.png",
               title: "Volvo S60",
               subtitle: "UnMatched Saftey",
             },
             {
-              img: "/images/ae.png",
+              img: "/Images/ae.png",
               title: "Toyota AE86",
               subtitle: "Iconic driving experience",
             },

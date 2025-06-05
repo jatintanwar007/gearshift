@@ -96,28 +96,28 @@ const Footer = () => {
             <div className="flex gap-4">
               <Link to="https://www.instagram.com/" target="_blank">
                 <img
-                  src="/images/instagram.png"
+                  src="/Images/instagram.png"
                   className="h-7 transition-transform transform hover:scale-110"
                   alt="Instagram"
                 />
               </Link>
               <Link to="https://www.facebook.com/" target="_blank">
                 <img
-                  src="/images/facebook.png"
+                  src="/Images/facebook.png"
                   className="h-7 transition-transform transform hover:scale-110"
                   alt="Facebook"
                 />
               </Link>
               <Link to="https://x.com/?lang=en" target="_blank">
                 <img
-                  src="/images/twitter.png"
+                  src="/Images/twitter.png"
                   className="h-7 bg-white rounded transition-transform transform hover:scale-110"
                   alt="Twitter"
                 />
               </Link>
               <Link to="https://www.youtube.com/" target="_blank">
                 <img
-                  src="/images/youtube.png"
+                  src="/Images/youtube.png"
                   className="h-7 transition-transform transform hover:scale-110"
                   alt="YouTube"
                 />
@@ -134,14 +134,14 @@ const Footer = () => {
                 target="_blank"
               >
                 <img
-                  src="/images/playstore.png"
+                  src="/Images/playstore.png"
                   className="h-10 transition-transform transform hover:scale-110"
                   alt="Google Play Store"
                 />
               </Link>
               <Link to="https://www.apple.com/in/app-store/" target="_blank">
                 <img
-                  src="/images/app-store.png"
+                  src="/Images/app-store.png"
                   className="h-10 transition-transform transform hover:scale-110"
                   alt="Apple App Store"
                 />

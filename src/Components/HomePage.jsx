@@ -137,7 +137,7 @@ const HomePage = () => {
                   </button>
                   <Link to="/profile">
                     <img
-                      src="/images/man.png"
+                      src="/Images/man.png"
                       alt="User avatar"
                       className="h-11 w-10 rounded-full"
                     />
