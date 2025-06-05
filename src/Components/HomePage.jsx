@@ -94,7 +94,7 @@ const HomePage = () => {
               aria-label="Company homepage"
             >
               <img
-                src="/images/image.png"
+                src="/Images/image.png"
                 className="h-14 w-auto"
                 alt="Company logo"
               />
