@@ -130,12 +130,27 @@ const Home = () => {
               loading="eager"
             />
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-4">
-              <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              {/* <h2 className="text-4xl md:text-6xl font-bold mb-4">
                 Welcome to GearShift
               </h2>
               <p className="text-xl md:text-2xl max-w-2xl">
                 Premium automotive experiences
-              </p>
+              </p> */}
+              <div className="max-w-2xl mx-auto">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4">
+                  Find Your Perfect Drive
+                </h1>
+                <p className="text-lg md:text-xl mb-6">
+                  Discover, compare, and book top-tier cars—tailored to your
+                  lifestyle.
+                </p>
+                <Link to={"/cars"}
+                  // id="car-listings"
+                  className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition duration-300"
+                >
+                  Explore Now
+                </Link>
+              </div>
             </div>
           </div>
         </div>

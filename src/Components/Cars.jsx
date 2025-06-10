@@ -85,6 +85,12 @@ const Cars = () => {
                   {car.price}
                 </span>
                 <button
+                  onClick={() => navigate("/car-details", { state: { car } })}
+                  className="bg-black text-white px-5 py-2 rounded-md hover:bg-red-600 transition duration-300 hover:scale-105"
+                >
+                  Know More
+                </button>
+                <button
                   onClick={() => navigate("/buy-now", { state: { car } })}
                   className="bg-black text-white px-5 py-2 rounded-md hover:bg-red-600 transition duration-300 hover:scale-105"
                 >

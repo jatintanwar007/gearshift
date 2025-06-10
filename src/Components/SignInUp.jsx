@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import OAuth from "./OAuth/OAuth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignInUp = () => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -13,10 +14,11 @@ const SignInUp = () => {
   const [pass, setPass] = useState("");
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
 
   const validateSignUp = () => {
     const newErrors = {};
@@ -25,9 +27,10 @@ const SignInUp = () => {
     else if (!emailRegex.test(email))
       newErrors.email = "Invalid format of email";
     if (!password.trim()) newErrors.password = "Password is required";
-    else if (!passwordRegex.test(password))
-      newErrors.password =
-        "Password must be at least 6 characters long and include letters & numbers";
+else if (!passwordRegex.test(password.trim()))
+  newErrors.password =
+    "Password must be at least 6 characters long and include letters & numbers";
+
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -159,13 +162,21 @@ const SignInUp = () => {
               <p className="text-red-500 text-xs">{errors.mail}</p>
             )}
 
-            <input
-              type="password"
-              placeholder="Password"
-              className="bg-gray-200 border p-2 rounded-lg w-full my-2 outline-none"
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
-            />
+            <div className="relative w-full my-2">
+      <input
+        type={showPassword ? "text" : "password"}
+        placeholder="Password"
+        className="bg-gray-200 border p-2 rounded-lg w-full pr-10 outline-none"
+        value={pass}
+        onChange={(e) => setPass(e.target.value)}
+      />
+      <span
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-600"
+        onClick={() => setShowPassword(!showPassword)}
+      >
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </span>
+    </div>
             {errors.pass && (
               <p className="text-red-500 text-xs">{errors.pass}</p>
             )}
@@ -227,13 +238,21 @@ const SignInUp = () => {
               <p className="text-red-500 text-xs">{errors.email}</p>
             )}
 
-            <input
-              type="password"
-              placeholder="Password"
-              className="bg-gray-200 border p-2 rounded-lg w-full my-2 outline-none"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="relative w-full my-2">
+      <input
+        type={showPassword ? "text" : "password"}
+        placeholder="Password"
+        className="bg-gray-200 border p-2 rounded-lg w-full pr-10 outline-none"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <span
+        className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-600"
+        onClick={() => setShowPassword((prev) => !prev)}
+      >
+        {showPassword ? <FaEyeSlash /> : <FaEye />}
+      </span>
+    </div>
             {errors.password && (
               <p className="text-red-500 text-xs">{errors.password}</p>
             )}

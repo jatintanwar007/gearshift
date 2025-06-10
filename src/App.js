@@ -15,6 +15,7 @@ import MyProfile from './Components/MyProfile';
 import ProtectedRoute from './Components/ProtectedRoute';
 import { ToastContainer } from 'react-toastify';
 import BuyNow from './Components/BuyNow';
+import CarDetails from './Components/CarDetails';
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -53,6 +54,7 @@ const App = () => {
     <Route path="/about" element={<AboutUs/>} />
     <Route path="/contact" element={<ContactUs/>} />
     <Route path="/whyus" element={<WhyChooseUs/>} />
+    <Route path="/car-details" element={<CarDetails/>} />
     <Route path="/account" element={<SignInUp/>} />
     {/* <Route path="/error" element={<Error/>} /> */}
     <Route path="*" element={<Error/>} />
